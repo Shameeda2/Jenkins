@@ -1,0 +1,14 @@
+parameter{
+   agent any
+   parameters{
+      String(defaultValue: "Development", description: "choose the env", name: env)
+   }
+   stages{
+      stage("Environment"){
+         steps{
+            echo " logging to ${params.env} environment"
+         }
+      }
+   }
+}
+   
