@@ -1,0 +1,15 @@
+pipeline{
+   agent any
+   parameters{
+   string(name: "Name", defaultValue: "MY Job", description:" enter name of the Job")
+   choices(name: "env", choices:["dev", "stag", "prod"], description: "select the env"
+   booleanParam(name: "run", defaultValue: false, description:"want to do dry run?")
+   }
+   stages{
+      stage("Demo"){
+          steps{
+              echo "It is ${params.run} that we are doing dry run of ${params.Name} in ${params.env} env. "
+          }
+      }
+   }
+}
