@@ -1,4 +1,4 @@
-parameter{
+pipeline{
    agent any
    parameters{
       String(defaultValue: "Development", description: "choose the env", name: env)
