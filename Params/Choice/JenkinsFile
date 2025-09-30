@@ -1,0 +1,13 @@
+parameters{
+   agent any
+   parameters{
+   choice(choices:["Dev","stag","prod"],defaultValue : "Dev", description:"select env")
+   }
+   stages{
+       stage{
+           steps{
+               echo " env is ${params.choices}"
+           }
+       }
+   }
+}
