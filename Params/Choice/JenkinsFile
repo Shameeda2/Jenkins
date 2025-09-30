@@ -1,7 +1,7 @@
 parameters{
    agent any
    parameters{
-   choice(choices:["Dev","stag","prod"],defaultValue : "Dev", description:"select env")
+   choice(choices:["Dev","stag","prod"],name : "choices", description:"select env")
    }
    stages{
        stage("Demo"){
