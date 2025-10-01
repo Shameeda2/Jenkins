@@ -9,7 +9,6 @@ pipeline{
         stage("Demo"){
             steps{
                 echo " name: ${env.name}\n age: ${env.age}\n minor: ${env.minor} "
-                # jenkins env variables
                 echo " build number: ${env.BUILD_NUMBER}" 
             }
         }
