@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    environment{
+        def name = "Shameeda"
+        def age = 10
+        def minor = true
+    }
+    stages{
+        stage("Demo"){
+            steps{
+                echo " name: ${env.name}\n age: ${env.age}\n minor: ${env.minor} "
+                # jenkins env variables
+                echo " build number: ${env.BUILD_NUMBER}" 
+            }
+        }
+    }
+}
